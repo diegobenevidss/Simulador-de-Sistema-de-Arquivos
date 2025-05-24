@@ -85,6 +85,16 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 - Java JDK 11 ou superior
 - IDE como Eclipse, IntelliJ ou VS Code
 
+### Comandos
+
+- **mkdir** nome - Cria um **diretório** chamado nome;
+- **touch** nome - Cria um **arquivo** chamado nome;
+- **rm** nome - Remove o **arquivo** chamado nome;
+- **rmdir** nome - Remove o **diretório** chamado nome;
+- **rename** antigo novo - **Renomeia** um arquivo ou diretório de antigo para novo;
+- **ls** - **Lista** arquivos e diretórios existentes;
+- **exit** - **Encerra** o simulador e exibe o log de operações;
+
 ### Execução
 
 1. Clone o repositório:

@@ -24,27 +24,27 @@ public class FileSystemSimulator {
         switch (parts[0]) {
             case "mkdir":
                 root.createDirectory(parts[1]);
-                journal.log("Criado diretório: " + parts[1]);
+                journal.log("Diretório criado: " + parts[1]);
                 break;
             case "touch":
                 root.createFile(parts[1]);
-                journal.log("Criado arquivo: " + parts[1]);
+                journal.log("Arquivo criado: " + parts[1]);
                 break;
             case "rm":
                 root.deleteFile(parts[1]);
-                journal.log("Removido arquivo: " + parts[1]);
+                journal.log("Arquivo removido: " + parts[1]);
                 break;
             case "rmdir":
                 root.deleteDirectory(parts[1]);
-                journal.log("Removido diretório: " + parts[1]);
+                journal.log("Diretório removido: " + parts[1]);
                 break;
             case "ls":
                 root.listContents();
-                journal.log("Listado conteúdo do diretório raiz");
+                journal.log("Conteúdo do diretório raiz listado");
                 break;
             case "rename":
                 root.rename(parts[1], parts[2]);
-                journal.log("Renomeado: " + parts[1] + " para " + parts[2]);
+                journal.log("Arquivo " + parts[1] + " renomeado para " + parts[2]);
                 break;
             default:
                 System.out.println("Comando inválido!");

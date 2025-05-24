@@ -54,10 +54,12 @@ O **journaling** é uma técnica de registro de operações que garante a consis
 
 ### Estrutura de Dados
 
-- `FileSystemSimulator`: Classe principal do simulador.
-- `File`: Representa um arquivo com nome e conteúdo.
-- `Directory`: Representa um diretório, contendo arquivos e outros diretórios.
-- `Journal`: Gerencia o log de operações para garantir a integridade.
+As estruturas de dados utilizadas neste projeto foram definidas por meio de **classes Java orientadas a objetos**, formando uma estrutura hierárquica que simula um sistema de arquivos. As classes são:
+
+- `FileSystemSimulator`: Classe principal do simulador. Controla a execução e interpreta os comandos do usuário.
+- `Directory`: Representa um diretório, que contém uma lista de arquivos e outros diretórios. Utiliza internamente uma `List<Arquivo>` e `List<Directory>` para armazenar os elementos.
+- `Arquivo`: Representa um arquivo simples, com nome e conteúdo.
+- `Journal`: Gerencia o registro (log) das operações realizadas no sistema de arquivos, como criação, exclusão e renomeação. Utiliza uma `List<String>` como estrutura de log.
 
 ### Journaling
 
@@ -92,19 +94,21 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 
 2. Compile todos os arquivos java:
    ```
-   src/main/java/Algoritmos.java
-   src/main/java/GraficoBarras.java 
-   src/main/java/Simulador.java
+   Directory.java
+   File.java 
+   FileSystemSimulator.java
+   Journal.java
    ```
 
 3. Execute a classe:
    ```
-   Simulador (src/main/java/Simulador.java)
+   FileSystemSimulator.java
    ```
    
 4. No console, digite os comandos desejados (mkdir, touch, rm, rmdir, rename, ls, exit):
    ```
-   Ex: mkdir documentos
+   Exemplo de entradas: 
+   mkdir documentos
    touch agenda.txt
    ls
    rename agenda.txt compromissos.txt
@@ -115,7 +119,13 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 
 📊 Saída Esperada
    ```
-   
+   Logs de operações:
+   Criado diretório: documentos
+   Criado arquivo: agenda.txt
+   Listado conteúdo do diretório raiz
+   Renomeado: agenda.txt para compromissos.txt
+   Removido arquivo: compromissos.txt
+   Removido diretório: documentos
    ```
 
 ## 👨‍💻 Autores
@@ -123,4 +133,4 @@ Desenvolvido por **Diego Benevides** e **Ian Sampaio**.
 
 ## 🔗 Repositório
 
-[Acesse o repositório do projeto no GitHub.](https://github.com/diegobenevidss/Simulador-de-Algoritmos-de-Substitui-o-de-P-ginas)
+[Acesse o repositório do projeto no GitHub.](https://github.com/diegobenevidss/Simulador-de-Sistema-de-Arquivos)
