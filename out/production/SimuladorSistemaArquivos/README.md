@@ -86,5 +86,41 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 ### Execução
 
 1. Clone o repositório:
-   ```bash
-   git clone https://github.com/SEU_USUARIO/NOME_DO_PROJETO.git
+   ```
+   git clone https://github.com/diegobenevidss/Simulador-de-Sistema-de-Arquivos.git
+   ```   
+
+2. Compile todos os arquivos java:
+   ```
+   src/main/java/Algoritmos.java
+   src/main/java/GraficoBarras.java 
+   src/main/java/Simulador.java
+   ```
+
+3. Execute a classe:
+   ```
+   Simulador (src/main/java/Simulador.java)
+   ```
+   
+4. No console, digite os comandos desejados (mkdir, touch, rm, rmdir, rename, ls, exit):
+   ```
+   Ex: mkdir documentos
+   touch agenda.txt
+   ls
+   rename agenda.txt compromissos.txt
+   rm compromissos.txt
+   rmdir documentos
+   exit
+   ```
+
+📊 Saída Esperada
+   ```
+   
+   ```
+
+## 👨‍💻 Autores
+Desenvolvido por **Diego Benevides** e **Ian Sampaio**.
+
+## 🔗 Repositório
+
+[Acesse o repositório do projeto no GitHub.](https://github.com/diegobenevidss/Simulador-de-Algoritmos-de-Substitui-o-de-P-ginas)
