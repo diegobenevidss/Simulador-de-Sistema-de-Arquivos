@@ -69,7 +69,7 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 
 ## 💻 Parte 3: Implementação em Java
 
-### Principais Classes:
+### Classes do projeto:
 
 - **FileSystemSimulator**: Interface principal para execução das operações.
 - **File**: Classe que representa um arquivo.
@@ -83,7 +83,6 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 ### Requisitos
 
 - Java JDK 11 ou superior
-- IDE como Eclipse, IntelliJ ou VS Code
 
 ### Comandos
 
@@ -115,9 +114,9 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
    FileSystemSimulator.java
    ```
    
-4. No console, digite os comandos desejados (mkdir, touch, rm, rmdir, rename, ls, exit):
+4. No console, digite os comandos desejados:
    ```
-   Exemplo de entradas: 
+   Ex: 
    mkdir documentos
    touch agenda.txt
    ls
