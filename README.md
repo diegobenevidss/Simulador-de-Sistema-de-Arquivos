@@ -93,7 +93,7 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 - **rmdir** nome - Remove o **diretório** chamado nome;
 - **rename** antigo novo - **Renomeia** um arquivo ou diretório de antigo para novo;
 - **ls** - **Lista** arquivos e diretórios existentes;
-- **exit** - **Encerra** o simulador e exibe o log de operações;
+- **exit** - **Encerra** o simulador e exibe o log de operações.
 
 ### Execução
 
@@ -121,25 +121,35 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
    mkdir documentos
    touch agenda.txt
    ls
+   rename agend.txt compromissos.txt
    rename agenda.txt compromissos.txt
+   rm comprom.txt
    rm compromissos.txt
+   rmdir doc
    rmdir documentos
    exit
    ```
 
-📊 Saída Esperada
+5. Saída Esperada
    ```
    Logs de operações:
-   Criado diretório: documentos
-   Criado arquivo: agenda.txt
-   Listado conteúdo do diretório raiz
+   Diretório criado: documentos
+   Arquivo criado: agenda.txt
+   Conteúdo do diretório raiz listado
+   Falha ao renomear: agend.txt para compromissos.txt
    Renomeado: agenda.txt para compromissos.txt
-   Removido arquivo: compromissos.txt
-   Removido diretório: documentos
+   Falha ao remover arquivo: comprom.txt
+   Arquivo removido: compromissos.txt
+   Falha ao remover diretório: doc
+   Diretório removido: documentos
    ```
+
+---
 
 ## 👨‍💻 Autores
 Desenvolvido por **Diego Benevides** e **Ian Sampaio**.
+
+---
 
 ## 🔗 Repositório
 

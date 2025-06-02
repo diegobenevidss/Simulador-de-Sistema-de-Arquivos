@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 class Directory {
@@ -10,31 +9,64 @@ class Directory {
         this.name = name;
     }
 
-    public void createFile(String name) {
+    public boolean createFile(String name) {
+        if (files.containsKey(name)) {
+            System.out.println("Arquivo já existe: " + name);
+            return false;
+        }
         files.put(name, new File(name));
+        return true;
     }
 
-    public void deleteFile(String name) {
+    public boolean deleteFile(String name) {
+        if (!files.containsKey(name)) {
+            System.out.println("Arquivo não encontrado: " + name);
+            return false;
+        }
         files.remove(name);
+        return true;
     }
 
-    public void createDirectory(String name) {
+    public boolean createDirectory(String name) {
+        if (directories.containsKey(name)) {
+            System.out.println("Diretório já existe: " + name);
+            return false;
+        }
         directories.put(name, new Directory(name));
+        return true;
     }
 
-    public void deleteDirectory(String name) {
+    public boolean deleteDirectory(String name) {
+        if (!directories.containsKey(name)) {
+            System.out.println("Diretório não encontrado: " + name);
+            return false;
+        }
         directories.remove(name);
+        return true;
     }
 
-    public void rename(String oldName, String newName) {
+    public boolean rename(String oldName, String newName) {
         if (files.containsKey(oldName)) {
+            if (files.containsKey(newName)) {
+                System.out.println("Já existe um arquivo com o nome: " + newName);
+                return false;
+            }
             File file = files.remove(oldName);
             file.setName(newName);
             files.put(newName, file);
+            return true;
         } else if (directories.containsKey(oldName)) {
+            if (directories.containsKey(newName)) {
+                System.out.println("Já existe um diretório com o nome: " + newName);
+                return false;
+            }
             Directory dir = directories.remove(oldName);
             dir.setName(newName);
             directories.put(newName, dir);
+            return true;
+        } else {
+            System.out.println("Arquivo ou diretório não encontrado: " + oldName);
+            return false;
         }
     }
 
