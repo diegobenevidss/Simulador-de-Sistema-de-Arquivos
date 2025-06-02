@@ -56,25 +56,25 @@ O **journaling** é uma técnica de registro de operações que garante a consis
 
 As estruturas de dados utilizadas neste projeto foram definidas por meio de **classes Java orientadas a objetos**, formando uma estrutura hierárquica que simula um sistema de arquivos. As classes são:
 
-- `FileSystemSimulator`: Classe principal do simulador. Controla a execução e interpreta os comandos do usuário.
-- `Directory`: Representa um diretório, que contém uma lista de arquivos e outros diretórios. Utiliza internamente uma `List<Arquivo>` e `List<Directory>` para armazenar os elementos.
+- `src.FileSystemSimulator`: Classe principal do simulador. Controla a execução e interpreta os comandos do usuário.
+- `src.Directory`: Representa um diretório, que contém uma lista de arquivos e outros diretórios. Utiliza internamente uma `List<Arquivo>` e `List<src.Directory>` para armazenar os elementos.
 - `Arquivo`: Representa um arquivo simples, com nome e conteúdo.
-- `Journal`: Gerencia o registro (log) das operações realizadas no sistema de arquivos, como criação, exclusão e renomeação. Utiliza uma `List<String>` como estrutura de log.
+- `src.Journal`: Gerencia o registro (log) das operações realizadas no sistema de arquivos, como criação, exclusão e renomeação. Utiliza uma `List<String>` como estrutura de log.
 
 ### Journaling
 
-O **Journal** registrará operações como criação, remoção, renomeação e cópia de arquivos/diretórios. O log será armazenado em uma estrutura de dados interna e poderá ser salvo em disco (modo avançado).
+O **src.Journal** registrará operações como criação, remoção, renomeação e cópia de arquivos/diretórios. O log será armazenado em uma estrutura de dados interna e poderá ser salvo em disco (modo avançado).
 
 ---
 
 ## 💻 Parte 3: Implementação em Java
 
-### Principais Classes:
+### Classes do projeto:
 
-- **FileSystemSimulator**: Interface principal para execução das operações.
-- **File**: Classe que representa um arquivo.
-- **Directory**: Classe que representa um diretório.
-- **Journal**: Classe que registra e gerencia as operações do sistema de arquivos.
+- **src.FileSystemSimulator**: Interface principal para execução das operações.
+- **src.File**: Classe que representa um arquivo.
+- **src.Directory**: Classe que representa um diretório.
+- **src.Journal**: Classe que registra e gerencia as operações do sistema de arquivos.
 
 ---
 
@@ -83,7 +83,6 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 ### Requisitos
 
 - Java JDK 11 ou superior
-- IDE como Eclipse, IntelliJ ou VS Code
 
 ### Comandos
 
@@ -104,38 +103,44 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 
 2. Compile todos os arquivos java:
    ```
-   Directory.java
-   File.java 
-   FileSystemSimulator.java
-   Journal.java
+   src.Directory.java
+   src.File.java 
+   src.FileSystemSimulator.java
+   src.Journal.java
    ```
 
 3. Execute a classe:
    ```
-   FileSystemSimulator.java
+   src.FileSystemSimulator.java
    ```
    
-4. No console, digite os comandos desejados (mkdir, touch, rm, rmdir, rename, ls, exit):
+4. No console, digite os comandos desejados:
    ```
-   Exemplo de entradas: 
+   Ex: 
    mkdir documentos
    touch agenda.txt
    ls
+   rename agend.txt compromissos.txt
    rename agenda.txt compromissos.txt
+   rm comprom.txt
    rm compromissos.txt
+   rmdir doc
    rmdir documentos
    exit
    ```
 
-📊 Saída Esperada
+5. Saída Esperada
    ```
    Logs de operações:
-   Criado diretório: documentos
-   Criado arquivo: agenda.txt
-   Listado conteúdo do diretório raiz
+   Diretório criado: documentos
+   Arquivo criado: agenda.txt
+   Conteúdo do diretório raiz listado
+   Falha ao renomear: agend.txt para compromissos.txt
    Renomeado: agenda.txt para compromissos.txt
-   Removido arquivo: compromissos.txt
-   Removido diretório: documentos
+   Falha ao remover arquivo: comprom.txt
+   Arquivo removido: compromissos.txt
+   Falha ao remover diretório: doc
+   Diretório removido: documentos
    ```
 
 ---
