@@ -19,7 +19,7 @@ class Journal {
 
     public void saveToFile(String filename) {
         try (PrintWriter writer = new PrintWriter(new FileWriter(filename, true))) {
-            writer.println(); // separador entre sessões
+            writer.println();
             writer.println("=== Novo log de operações (" + new Date() + ") ===");
 
             for (String log : logs) {
