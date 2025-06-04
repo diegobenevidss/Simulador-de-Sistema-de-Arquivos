@@ -91,6 +91,7 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 - **rm** nome - Remove o **arquivo** chamado nome;
 - **rmdir** nome - Remove o **diretório** chamado nome;
 - **rename** antigo novo - **Renomeia** um arquivo ou diretório de antigo para novo;
+- **cp** origem destino - **Copia** um arquivo da sua origem para o seu destino;
 - **ls** - **Lista** arquivos e diretórios existentes;
 - **exit** - **Encerra** o simulador e exibe o log de operações.
 
