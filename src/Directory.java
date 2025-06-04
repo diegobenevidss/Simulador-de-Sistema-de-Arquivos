@@ -29,19 +29,6 @@ class Directory {
         return true;
     }
 
-    public boolean copyFile(String sourceName, String destName) {
-        if (!files.containsKey(sourceName)) {
-            System.out.println("Arquivo de origem não encontrado: " + sourceName);
-            return false;
-        }
-        if (files.containsKey(destName)) {
-            System.out.println("Já existe um arquivo com o nome: " + destName);
-            return false;
-        }
-        files.put(destName, new File(destName));
-        return true;
-    }
-
     public boolean createDirectory(String name) {
         if (directories.containsKey(name)) {
             System.out.println("Diretório já existe: " + name);
