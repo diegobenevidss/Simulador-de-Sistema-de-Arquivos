@@ -130,16 +130,17 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 
 5. Saída Esperada
    ```
-   Logs de operações:
-   Diretório criado: documentos
-   Arquivo criado: agenda.txt
-   Conteúdo do diretório raiz listado
-   Falha ao renomear: agend.txt para compromissos.txt
-   Renomeado: agenda.txt para compromissos.txt
-   Falha ao remover arquivo: comprom.txt
-   Arquivo removido: compromissos.txt
-   Falha ao remover diretório: doc
-   Diretório removido: documentos
+   === Novo log de operações (Wed Jun 04 18:04:17 BRT 2025) ===
+   1. Diretório criado: documentos
+   2. Arquivo criado: agenda.txt
+   3. Conteúdo do diretório raiz listado
+   4. Falha ao renomear: agend.txt para compromissos.txt
+   5. Renomeado: agenda.txt para compromissos.txt
+   6. Falha ao remover arquivo: comprom.txt
+   7. Arquivo removido: compromissos.txt
+   8. Falha ao remover diretório: doc
+   9. Diretório removido: documentos
+   === Fim do log ===
    ```
 
 ---
