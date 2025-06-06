@@ -105,7 +105,7 @@ O **Journal** registrará operações como criação, remoção, renomeação e 
 2. Compile todos os arquivos java:
    ```
    cd src
-   javac Diretory.java File.java FileSystemSimulator.java Journal.java
+   javac Directory.java File.java FileSystemSimulator.java Journal.java
    ```
 
 3. Execute a classe principal:

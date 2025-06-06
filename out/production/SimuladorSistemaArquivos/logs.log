@@ -27,3 +27,11 @@
 5. Arquivo copiado: compromissos.txt para copia_compromissos.txt
 6. Conteúdo do diretório raiz listado
 === Fim do log ===
+
+=== Novo log de operações (Thu Jun 05 09:02:47 BRT 2025) ===
+1. Diretório criado: documentos
+2. Arquivo criado: agenda.txt
+3. Diretório removido: documentos
+4. Arquivo removido: agenda.txt
+5. Conteúdo do diretório raiz listado
+=== Fim do log ===

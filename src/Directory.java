@@ -4,11 +4,13 @@ import java.util.*;
 
 class Directory {
     private String name;
+    private Directory parent;
     private Map<String, File> files = new HashMap<>();
     private Map<String, Directory> directories = new HashMap<>();
 
-    public Directory(String name) {
+    public Directory(String name, Directory parent) {
         this.name = name;
+        this.parent = parent;
     }
 
     public boolean createFile(String name) {
@@ -47,7 +49,7 @@ class Directory {
             System.out.println("Diretório já existe: " + name);
             return false;
         }
-        directories.put(name, new Directory(name));
+        directories.put(name, new Directory(name, this));
         return true;
     }
 
@@ -90,6 +92,19 @@ class Directory {
         for (String f : files.keySet()) System.out.println(" - " + f);
         System.out.println("Diretórios:");
         for (String d : directories.keySet()) System.out.println(" - " + d);
+    }
+
+    public Directory getSubDirectory(String name) {
+        return directories.get(name);
+    }
+
+    public Directory getParent() {
+        return parent;
+    }
+
+    public String getPath() {
+        if (parent == null) return "/" + name;
+        return parent.getPath() + "/" + name;
     }
 
     public void setName(String name) {
